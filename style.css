@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --dark-blue: hsl(234, 12%, 34%);
+  --dark-gray: hsl(0, 0%, 98%);
+  --grayish-blue: hsl(229, 6%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  background-color: var(--dark-gray);
+}
+
+p {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+}
+
+.introduction {
+  margin: 3rem auto;
+  text-align: center;
+  width: 30rem;
+}
+
+.introduction h1:nth-child(1) {
+  font-weight: 200;
+}
+
+.introduction h1:nth-child(2) {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 15rem) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-item {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: -1px 5px 0px 4px whitesmoke;
+    margin: 5% auto;
+    padding: 0 1.8rem;
+    width: 70%;
+    height: 30vh;
+  }
+
+  .supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+  }
+
+  .builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+  }
+
+  .karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+  }
+
+  .calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+  }
+
+  img {
+    width: 8vw;
+    align-self: flex-end;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 36.5rem) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-item {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 56.5rem) {
+  .introduction h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--dark-blue);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 2rem;
+  }
+
+  .card-item {
+    width: 95%;
+  }
+
+  img {
+    width: 4vw;
+  }
+
+  .supervisor {
+    grid-area: 2/1;
+    margin-top: -30%;
+  }
+  .builder {
+    grid-area: 1/2;
+  }
+  .karma {
+    grid-area: 2/2;
+  }
+  .calculator {
+    grid-area: 2/3;
+    margin-top: -30%;
+  }
+}
+
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/** card on mobile: flex-direction: column */
